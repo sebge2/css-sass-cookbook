@@ -1,0 +1,44 @@
+* {
+    display: block;
+    margin: 10px;
+}
+
+/* Element with attribute */
+input[type] {
+    color: blue;
+}
+
+/* Element with specific attribute value */
+input[type="email"] {
+    color: red;
+}
+
+/* Element with specific attribute Value/Value- */
+p[lang|="en"] {
+    color: red;
+}
+
+/* Element with specific attribute in list */
+p[lang~="en-us"] {
+    color: blue;
+}
+
+/* Element with specific attribute value prefix */
+[href^="#"] {
+    color: yellow;
+}
+
+/* Element with specific attribute value suffix */
+[href$=".de"] {
+    color: orange;
+}
+
+/* Element with specific attribute value contains */
+[href*="cdn"] {
+    color: purple;
+}
+
+/* Element with specific attribute value contains (insensitive) */
+[href*="google" i] {
+    color: pink;
+}

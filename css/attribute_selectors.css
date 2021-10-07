@@ -1,4 +1,6 @@
-* {
+input,
+a,
+p {
   display: block;
   margin: 10px;
 }

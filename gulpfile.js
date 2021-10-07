@@ -22,8 +22,8 @@ gulp.task('copy-resources', function() {
 });
 
 gulp.task('watch', () => {
-    gulp.watch('scss/**/*.scss', (done) => {
-        gulp.series(['clean', 'styles'])(done);
+    gulp.watch(['scss/**/*.scss', '*.html'], (done) => {
+        gulp.series(['clean', 'styles', 'copy-resources'])(done);
     });
 });
 

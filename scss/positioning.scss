@@ -1,7 +1,47 @@
+.example {
+    border: 3px solid black;
+    margin: 50px auto;
+}
+
+.box {
+  display: inline-block;
+  width: 250px;
+  height: 250px;
+  background: red;
+  color: white;
+  margin: 5px
+}
+
 .fixed {
     position: fixed;
+    top: 90%;
+    left: 15%;
+}
 
-    top: 3%;
-    left: 5%;
-    border: 1px solid black;
+.static {
+    position: static;
+    border: 3px solid red;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+  position: absolute;
+  top: 50px;
+  left: 250px;
+}
+
+.sticky {
+     height: 200px;
+     overflow:auto;
+
+    dt {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+      background-color: red;
+      padding: 5px;
+    }
 }

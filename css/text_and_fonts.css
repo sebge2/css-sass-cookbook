@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+@font-face {
+  font-family: "Ephesis";
+  src: url("../assets/fonts/Ephesis-Regular.ttf") format("truetype");
+}
+* {
+  margin: 10px;
+}
+
+html {
+  font-size: 300%;
+}
+
+h1 {
+  margin: 50px 10px;
+}
+
+.font_weight_400 {
+  font-weight: 400;
+}
+
+.font_weight_700 {
+  font-weight: 700;
+}
+
+.custom_webfont {
+  font-family: "Montserrat";
+}
+
+.custom_with_fallback {
+  font-family: "Unknown", sans-serif;
+}
+
+.generic_family_sans_serif {
+  font-family: sans-serif;
+}
+
+.generic_family_serif {
+  font-family: serif;
+}
+
+.custom_webfont_from_css {
+  font-family: "Open Sans", sans-serif;
+}
+
+.custom_font {
+  font-family: "Ephesis";
+}

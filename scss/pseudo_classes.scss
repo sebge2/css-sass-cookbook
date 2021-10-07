@@ -1,0 +1,25 @@
+input,
+a {
+    display: block;
+    margin: 10px;
+}
+
+input:not([type="number"]) {
+    background: red;
+}
+
+input:hover {
+    background: yellow;
+}
+
+input:required {
+    background: purple;
+}
+
+input:invalid {
+    background: orange;
+}
+
+input:active {
+    background: blue;
+}

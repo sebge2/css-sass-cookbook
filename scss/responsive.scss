@@ -1,0 +1,41 @@
+.documentation {
+    text-align: center;
+    width: 100%;
+}
+
+.box {
+    background: red;
+    width: 200px;
+    height: 200px;
+    margin: 10px auto;
+}
+
+@media (min-width: 40rem) {
+    .box {
+        background: yellow;
+    }
+}
+
+@media (min-width: 40rem) and (min-height: 40rem) {
+    .box {
+        background: green;
+    }
+}
+
+@media (orientation: landscape) {
+  .landscape {
+    display: inline;
+  }
+  .portrait {
+    display: none;
+  }
+}
+
+@media (orientation: portrait) {
+  .landscape {
+    display: none;
+  }
+  .portrait {
+    display: inline;
+  }
+}

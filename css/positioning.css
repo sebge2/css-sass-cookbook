@@ -1,0 +1,6 @@
+.fixed {
+  position: fixed;
+  top: 3%;
+  left: 5%;
+  border: 1px solid black;
+}

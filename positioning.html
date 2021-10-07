@@ -5,8 +5,63 @@
 </head>
 <body>
 
-<div class="fixed">
-  <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position">position: fixed</a>: The element is removed from the normal document flow, and no space is created for the element in the page layout.
+<div class="fixed example">
+  <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position">position: fixed</a>: the element is removed from the normal document flow, and no space is created for the element in the page layout.
+</div>
+
+<div class="example">
+  <div class="static">
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position">position: static</a>: the element is positioned according to the normal flow of the document. <b>Default value</b>.
+  </div>
+</div>
+
+<div class="example">
+  <div class="box">One</div>
+  <div class="box relative">
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position">position: relative</a>: relatively positioned elements are offset a given amount from their normal position within the document, but without the offset affecting other elements.
+  </div>
+  <div class="box">Three</div>
+  <div class="box">Four</div>
+</div>
+
+<div class="example" style="position: relative">
+  <div class="box">One</div>
+  <div class="box absolute">
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position">position: absolute</a>: elements that are relatively positioned remain in the normal flow of the document. In contrast, an element that is absolutely positioned is taken out of the flow; thus, other elements are positioned as if it did not exist. The absolutely positioned element is positioned relative to its nearest positioned ancestor (i.e., not static).
+  </div>
+  <div class="box">Three</div>
+  <div class="box">Four</div>
+</div>
+
+<div class="example sticky">
+  <div>
+    <dt>A</dt>
+    <dd>Andrew W.K.</dd>
+    <dd>Apparat</dd>
+    <dd>Arcade Fire</dd>
+    <dd>At The Drive-In</dd>
+    <dd>Aziz Ansari</dd>
+  </div>
+  <div>
+    <dt>C</dt>
+    <dd>Chromeo</dd>
+    <dd>Common</dd>
+    <dd>Converge</dd>
+    <dd>Crystal Castles</dd>
+    <dd>Cursive</dd>
+  </div>
+  <div>
+    <dt>E</dt>
+    <dd>Explosions In The Sky</dd>
+  </div>
+  <div>
+    <dt>T</dt>
+    <dd>Ted Leo &amp; The Pharmacists</dd>
+    <dd>T-Pain</dd>
+    <dd>Thrice</dd>
+    <dd>TV On The Radio</dd>
+    <dd>Two Gallants</dd>
+  </div>
 </div>
 
 </body>

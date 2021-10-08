@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/flex_box.css">
+    <title>Flex Box</title>
+</head>
+<body>
+
+<h1>Display: flex, flex-direction: row, flex-wrap: no-wrap</h1>
+<div class="flex-container example">
+    <div class="item item-1">div</div>
+    <div class="item w-250">w=250px</div>
+    <div class="item h-250">h=250px</div>
+    <div class="item h-300 w-300">w/h=300px</div>
+    <div class="item w-350">w=350px</div>
+    <div class="item w-350">w=350px</div>
+</div>
+
+<h1>Display: flex, flex-direction: row, flex-wrap: wrap</h1>
+<div class="flex-container flex-wrap example">
+    <div class="item item-1">div</div>
+    <div class="item w-250">w=250px</div>
+    <div class="item h-250">h=250px</div>
+    <div class="item h-300 w-300">w/h=300px</div>
+    <div class="item w-350">w=350px</div>
+    <div class="item w-350">w=350px</div>
+</div>
+
+<h1>Display: flex, flex-direction: column, flex-wrap: nowrap</h1>
+<div class="flex-container flex-column example">
+    <div class="item item-1">div</div>
+    <div class="item w-250">w=250px</div>
+    <div class="item h-250">h=250px</div>
+    <div class="item h-300 w-300">w/h=300px</div>
+    <div class="item w-350">w=350px</div>
+    <div class="item w-350">w=350px</div>
+</div>
+
+<h1>Display: flex, flex-direction: column, flex-wrap: wrap</h1>
+<div class="flex-container flex-column flex-wrap example">
+    <div class="item item-1">div</div>
+    <div class="item w-250">w=250px</div>
+    <div class="item h-250">h=250px</div>
+    <div class="item h-300 w-300">w/h=300px</div>
+    <div class="item w-350">w=350px</div>
+    <div class="item w-350">w=350px</div>
+</div>
+
+<h1>Display: flex, flex-direction: row, align-self: flex-start</h1>
+<div class="flex-container align-items-center h-800 example">
+    <div class="item item-1">div</div>
+    <div class="item w-250 align-self-flex-start">w=250px</div>
+    <div class="item h-250">h=250px</div>
+    <div class="item h-300 w-300">w/h=300px</div>
+    <div class="item w-350">w=350px</div>
+    <div class="item w-350">w=350px</div>
+</div>
+
+<h1>Display: flex, flex-direction: row, flex-grow: 100</h1>
+<div class="flex-container align-items-center example">
+    <div class="item item-1">div</div>
+    <div class="item w-250">w=250px</div>
+    <div class="item h-250">h=250px</div>
+    <div class="item h-300 w-300">w/h=300px</div>
+    <div class="item w-350">w=350px flex-grow: 000</div>
+    <div class="item w-350 flex-grow-100">w=350px flex-grow: 100</div>
+</div>
+
+<h1>Display: flex, flex-direction: row, flex-shrink: 0/10</h1>
+<div class="flex-container align-items-center example">
+    <div class="item item-1">div</div>
+    <div class="item w-250">w=250px</div>
+    <div class="item h-250">h=250px</div>
+    <div class="item h-300 w-300">w/h=300px</div>
+    <div class="item w-350 flex-shrink-0">w=350px flex-shrink: 000</div>
+    <div class="item w-350 flex-shrink-10">w=350px flex-shrink: 10</div>
+</div>
+
+<!--
+TODO inline-flex
+-->
+</body>
+</html>

@@ -22,9 +22,37 @@ gulp.task('copy-resources', function() {
   ]);
 });
 
+gulp.task('generate-index', function() {
+    function formatter(filePath) {
+      return `<li><a href="${filePath}">${filePath}</a>`;
+    }
+
+    return merge([gulp
+        .src(['./html/*.html'])
+        .pipe(require('gulp-filelist')('index.html', { destRowTemplate: formatter, relative: true }))
+        .pipe(require('gulp-modify-file')((content) => {
+           return `
+           <!DOCTYPE html>
+           <html>
+           <head>
+               <title>CSS & SASS Cookbook</title>
+           </head>
+           <body>
+               <p>Available Pages:</p>
+               <ul id="page_list">
+                    ${content}
+               </ul>
+           </body>
+           </html>
+           `;
+         }))
+      .pipe(gulp.dest('build'))
+    ]);
+});
+
 gulp.task('watch', () => {
     reload = function (done) {
-        gulp.series(['clean', 'styles', 'copy-resources'])(done);
+        gulp.series(['clean', 'styles', 'copy-resources', 'generate-index'])(done);
     }
 
     gulp.watch('scss/**/*.scss', reload);
@@ -32,4 +60,4 @@ gulp.task('watch', () => {
     gulp.watch('assets/**/*', reload);
 });
 
-gulp.task('default', gulp.series(['clean', 'styles', 'copy-resources']));
+gulp.task('default', gulp.series(['clean', 'styles', 'copy-resources', 'generate-index']));

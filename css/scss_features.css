@@ -1,0 +1,65 @@
+h1 {
+  margin-top: 50px;
+}
+
+.my-parent, .my-child {
+  background: #ffc966;
+  padding: 10px;
+  margin: 20px auto;
+}
+
+.my-child {
+  border: 1px dashed gray;
+}
+
+.simple-variable {
+  border: 1px solid black;
+}
+
+.map-variable span {
+  color: red;
+}
+.map-variable p {
+  color: orange;
+}
+
+.my-mixin-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (min-width: 40rem) {
+  .my-mixin-content-grid {
+    background-color: red;
+  }
+}
+
+.my-ampersand {
+  padding: 10px;
+  background: red;
+}
+.my-ampersand:hover {
+  background: #ff3333;
+}
+
+.my-for-loop ul :nth-child(3n+1) {
+  background-color: #0059b3;
+}
+.my-for-loop ul :nth-child(3n+2) {
+  background-color: #0080ff;
+}
+.my-for-loop ul :nth-child(3n+3) {
+  background-color: #4da6ff;
+}
+
+.my-if-else .square {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+}
+.my-if-else .circle {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  border-radius: 50px;
+}

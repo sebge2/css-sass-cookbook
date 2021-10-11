@@ -14,6 +14,7 @@
     "gulp-modify-file": "^1.0.1",
     "gulp-sass": "^5.0.0",
     "merge-stream": "^2.0.0",
-    "sass": "^1.42.1"
+    "sass": "^1.42.1",
+    "xpath-html": "^1.0.2"
   }
 }

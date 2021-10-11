@@ -2,6 +2,8 @@ const gulp = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const del = require('del');
 const merge = require("merge-stream");
+const fs = require("fs");
+const xpath = require("xpath-html");
 
 gulp.task('clean', () => {
     return del([
@@ -24,12 +26,15 @@ gulp.task('copy-resources', function() {
 
 gulp.task('generate-index', function() {
     function formatter(filePath) {
-      return `<li><a href="${filePath}">${filePath}</a>`;
+        const htmlContent = fs.readFileSync(filePath, 'utf8');
+        const title = xpath.fromPageSource(htmlContent).findElement("//title");
+
+        return `<li><a href="${filePath}">${title.getText()}</a>\n`;
     }
 
     return merge([gulp
         .src(['./html/*.html'])
-        .pipe(require('gulp-filelist')('index.html', { destRowTemplate: formatter, relative: true }))
+        .pipe(require('gulp-filelist')('index.html', { destRowTemplate: formatter}))
         .pipe(require('gulp-modify-file')((content) => {
            return `
            <!DOCTYPE html>

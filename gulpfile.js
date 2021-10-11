@@ -26,7 +26,7 @@ gulp.task('copy-resources', function() {
 
 gulp.task('generate-index', function() {
     function formatter(filePath) {
-        const htmlContent = fs.readFileSync(filePath, 'utf8');
+        const htmlContent = fs.readFileSync(`./html/${filePath}`, 'utf8');
         const title = xpath.fromPageSource(htmlContent).findElement("//title");
 
         return `<li><a href="${filePath}">${title.getText()}</a>\n`;
@@ -34,7 +34,7 @@ gulp.task('generate-index', function() {
 
     return merge([gulp
         .src(['./html/*.html'])
-        .pipe(require('gulp-filelist')('index.html', { destRowTemplate: formatter}))
+        .pipe(require('gulp-filelist')('index.html', { destRowTemplate: formatter, relative: true}))
         .pipe(require('gulp-modify-file')((content) => {
            return `
            <!DOCTYPE html>

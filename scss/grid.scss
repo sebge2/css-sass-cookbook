@@ -1,3 +1,7 @@
+h1 {
+    margin-top: 50px;
+}
+
 .grid {
     display: grid;
     grid-gap: 5px
@@ -116,4 +120,16 @@
 
 .example-8-grid {
     grid-template-columns: repeat(auto-fill, 500px);
+}
+
+.example-9-2 {
+    grid-column: span 2;
+}
+
+.example-10-grid {
+    grid-auto-flow: row dense;
+}
+
+.example-10-2 {
+    grid-column: span 2;
 }

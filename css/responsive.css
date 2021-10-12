@@ -1,23 +1,63 @@
+html {
+  font-family: monospace;
+}
+
+h1 {
+  color: #c26f9c;
+}
+h1:not(:first-of-type) {
+  margin-top: 4rem;
+}
+
+.example-box {
+  margin: 2rem auto;
+  border: 1px solid #c26f9c;
+  font-size: 1.5rem;
+}
+.example-box .example-inner-box {
+  background: #c26f9c;
+  color: #113362;
+  border: 1px dashed #113362;
+  padding: 0.9rem;
+}
+
+.w-250 {
+  width: 250px;
+}
+
+.w-300 {
+  width: 300px;
+}
+
+.w-350 {
+  width: 350px;
+}
+
+.h-250 {
+  height: 250px;
+}
+
+.h-300 {
+  height: 300px;
+}
+
+.h-800 {
+  height: 800px;
+}
+
 .documentation {
   text-align: center;
   width: 100%;
 }
 
-.box {
-  background: red;
-  width: 200px;
-  height: 200px;
-  margin: 10px auto;
-}
-
 @media (min-width: 40rem) {
-  .box {
-    background: yellow;
+  .example-box {
+    background: #113362;
   }
 }
 @media (min-width: 40rem) and (min-height: 40rem) {
-  .box {
-    background: green;
+  .example-box {
+    background: #f7ecf2;
   }
 }
 @media (orientation: landscape) {

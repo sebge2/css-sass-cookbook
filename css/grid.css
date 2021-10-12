@@ -1,8 +1,10 @@
 html {
-  color: #c26f9c;
   font-family: monospace;
 }
 
+h1 {
+  color: #c26f9c;
+}
 h1:not(:first-of-type) {
   margin-top: 4rem;
 }

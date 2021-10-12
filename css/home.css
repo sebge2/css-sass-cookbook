@@ -1,8 +1,10 @@
 html {
-  color: #c26f9c;
   font-family: monospace;
 }
 
+h1 {
+  color: #c26f9c;
+}
 h1:not(:first-of-type) {
   margin-top: 4rem;
 }
@@ -55,7 +57,7 @@ body {
 .cards {
   display: grid;
   grid-gap: 4rem;
-  grid-template-columns: repeat(auto-fill, 10rem);
+  grid-template-columns: repeat(auto-fill, 13rem);
 }
 .cards > a {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);

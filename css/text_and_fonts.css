@@ -1,20 +1,55 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+html {
+  font-family: monospace;
+}
+
+h1 {
+  color: #c26f9c;
+}
+h1:not(:first-of-type) {
+  margin-top: 4rem;
+}
+
+.example-box {
+  margin: 2rem auto;
+  border: 1px solid #c26f9c;
+  font-size: 1.5rem;
+}
+.example-box .example-inner-box {
+  background: #c26f9c;
+  color: #113362;
+  border: 1px dashed #113362;
+  padding: 0.9rem;
+}
+
+.w-250 {
+  width: 250px;
+}
+
+.w-300 {
+  width: 300px;
+}
+
+.w-350 {
+  width: 350px;
+}
+
+.h-250 {
+  height: 250px;
+}
+
+.h-300 {
+  height: 300px;
+}
+
+.h-800 {
+  height: 800px;
+}
+
 @font-face {
   font-family: "Ephesis";
   src: url("../assets/fonts/Ephesis-Regular.ttf") format("truetype");
 }
-* {
-  margin: 10px;
-}
-
-html {
-  font-size: 300%;
-}
-
-h1 {
-  margin: 50px 10px;
-}
-
 .font_weight_400 {
   font-weight: 400;
 }

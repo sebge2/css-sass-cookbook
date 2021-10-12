@@ -15,6 +15,7 @@ h1:not(:first-of-type) {
 .example-box .example-inner-box {
   background: #c26f9c;
   color: #113362;
+  border: 1px dashed #113362;
   padding: 0.9rem;
 }
 

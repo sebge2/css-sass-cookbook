@@ -1,46 +1,83 @@
-input,
-a,
-p {
-  display: block;
-  margin: 10px;
+html {
+  color: #c26f9c;
+  font-family: monospace;
 }
 
-/* Element with attribute */
+h1:not(:first-of-type) {
+  margin-top: 4rem;
+}
+
+.example-box {
+  margin: 2rem auto;
+  border: 1px solid #c26f9c;
+  font-size: 1.5rem;
+}
+.example-box .example-inner-box {
+  background: #c26f9c;
+  color: #113362;
+  padding: 0.9rem;
+}
+
+.w-250 {
+  width: 250px;
+}
+
+.w-300 {
+  width: 300px;
+}
+
+.w-350 {
+  width: 350px;
+}
+
+.h-250 {
+  height: 250px;
+}
+
+.h-300 {
+  height: 300px;
+}
+
+.h-800 {
+  height: 800px;
+}
+
+/* Input with attribute "type" defined */
 input[type] {
   color: blue;
 }
 
-/* Element with specific attribute value */
+/* Input with specific attribute "type" equals to "email" */
 input[type=email] {
   color: red;
 }
 
-/* Element with specific attribute Value/Value- */
+/* Paragraph with specific attribute "lang" equals "en", or "en-" */
 p[lang|=en] {
   color: red;
 }
 
-/* Element with specific attribute in list */
+/* Paragraph with specific attribute "lang" having in the list "en-us" */
 p[lang~=en-us] {
   color: blue;
 }
 
-/* Element with specific attribute value prefix */
+/* Element with specific attribute "href" having a value prefixed by "#" */
 [href^="#"] {
   color: yellow;
 }
 
-/* Element with specific attribute value suffix */
+/* Element with specific attribute "href" having a value suffixed by ".de" */
 [href$=".de"] {
   color: orange;
 }
 
-/* Element with specific attribute value contains */
+/* Element with specific attribute "href" having a value containing "cdn" */
 [href*=cdn] {
   color: purple;
 }
 
-/* Element with specific attribute value contains (insensitive) */
+/* Element with specific attribute "href" having a value containing (insensitive) "google" */
 [href*=google i] {
   color: pink;
 }

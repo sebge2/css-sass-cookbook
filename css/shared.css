@@ -1,0 +1,43 @@
+html {
+  color: #c26f9c;
+  font-family: monospace;
+}
+
+h1:not(:first-of-type) {
+  margin-top: 4rem;
+}
+
+.example-box {
+  margin: 2rem auto;
+  border: 1px solid #c26f9c;
+  font-size: 1.5rem;
+}
+.example-box .example-inner-box {
+  background: #c26f9c;
+  color: #113362;
+  padding: 0.9rem;
+}
+
+.w-250 {
+  width: 250px;
+}
+
+.w-300 {
+  width: 300px;
+}
+
+.w-350 {
+  width: 350px;
+}
+
+.h-250 {
+  height: 250px;
+}
+
+.h-300 {
+  height: 300px;
+}
+
+.h-800 {
+  height: 800px;
+}

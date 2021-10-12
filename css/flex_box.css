@@ -1,18 +1,21 @@
-div {
-  box-sizing: border-box;
+html {
+  color: #c26f9c;
+  font-family: monospace;
+}
+
+h1:not(:first-of-type) {
+  margin-top: 4rem;
+}
+
+.example-box {
+  margin: 2rem auto;
+  border: 1px solid #c26f9c;
   font-size: 1.5rem;
 }
-
-.example {
-  margin: 50px auto;
-  border: 1px solid black;
-}
-
-.item {
-  background: #ff7300;
-  padding: 10px;
-  border: 5px solid black;
-  margin: 10px;
+.example-box .example-inner-box {
+  background: #c26f9c;
+  color: #113362;
+  padding: 0.9rem;
 }
 
 .w-250 {
@@ -37,6 +40,15 @@ div {
 
 .h-800 {
   height: 800px;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+.example-box .example-inner-box {
+  border: 5px solid black;
+  margin: 10px;
 }
 
 .flex-container {

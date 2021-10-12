@@ -6,17 +6,30 @@
     <title>Attribute Selectors</title>
 </head>
 <body>
+    <h1>Element with a specific attribute defined</h1>
     <input type="button" value="Button" />
+
+    <h1>Element with specific attribute equals to</h1>
     <input type="email" value="email@acme.org" />
 
+    <h1>Element with specific attribute equals to XX, or XX-</h1>
     <p lang="en">en</p>
-    <p lang="en-us en-gb">en-us en-gb</p>
     <p lang="en-gb">en-gb</p>
     <p lang="en-ca">en-ca</p>
 
-    <a href="#all">Element with specific attribute value prefix</a>
-    <a href="germany.de">Element with specific attribute value suffix</a>
-    <a href="cloufront.cdn.aws.com">Element with specific attribute value contains</a>
-    <a href="GOOGLE.com">Element with specific attribute value insensitive</a>
+    <h1>Element with specific attribute having a specific value in list</h1>
+    <p lang="en-us en-gb">en-us en-gb</p>
+
+    <h1>Element with specific attribute value prefixed by</h1>
+    <a href="#all">Prefix #</a>
+
+    <h1>Element with specific attribute value suffixed by</h1>
+    <a href="germany.de">Suffix .de</a>
+
+    <h1>Element with specific attribute value containing</h1>
+    <a href="cloufront.cdn.aws.com">substring cdn</a>
+
+    <h1>Element with specific attribute value containing (insensitive)</h1>
+    <a href="GOOGLE.com">substring google</a>
 </body>
 </html>

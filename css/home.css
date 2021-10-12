@@ -1,0 +1,44 @@
+body {
+  padding: 2rem;
+}
+
+.page-icon {
+  fill: #c26f9c;
+  transition: 0.3s;
+}
+
+.cards {
+  display: grid;
+  grid-gap: 4rem;
+  grid-template-columns: repeat(auto-fill, 10rem);
+}
+.cards > a {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  height: 10rem;
+  text-decoration: none;
+  display: grid;
+  grid-template-rows: 5rem auto;
+  grid-gap: 1rem;
+  /* center horizontally every item */
+  justify-items: center;
+  /* center vertically the grid */
+  align-content: center;
+}
+.cards > a:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.cards > a:hover .page-icon {
+  fill: #d193b5;
+  color: #d193b5;
+}
+.cards > a:hover > p {
+  fill: #d193b5;
+  color: #d193b5;
+}
+.cards > a > p {
+  color: #c26f9c;
+  font-family: monospace;
+  font-weight: bolder;
+  transition: 0.3s;
+}

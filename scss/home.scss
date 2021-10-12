@@ -1,0 +1,59 @@
+@import 'shared.scss';
+
+$card-width: 10rem;
+$card-height: 10rem;
+
+body {
+    padding: 2rem;
+}
+
+.page-icon {
+    fill: map-get($colors, main-color);
+    transition: $transition-duration;
+}
+
+.cards {
+    display: grid;
+    grid-gap: 4rem;
+    grid-template-columns: repeat(auto-fill, $card-width);
+
+    & > a {
+      box-shadow: map-get($box-shadow, on-hover);
+      transition: $transition-duration;
+      height: $card-height;
+      text-decoration: none;
+
+      display: grid;
+      grid-template-rows: calc($card-height / 2) auto;
+      grid-gap: 1rem;
+
+      /* center horizontally every item */
+      justify-items: center;
+
+      /* center vertically the grid */
+      align-content: center;
+
+      &:hover {
+        box-shadow: map-get($box-shadow, inactive);
+
+        .page-icon {
+            @include lighten-main-color
+        }
+
+        & > p {
+            @include lighten-main-color
+        }
+      }
+
+      & > svg {
+      }
+
+      & > p {
+        color: map-get($colors, main-color);
+        font-family: monospace;
+        font-weight: bolder;
+        transition: $transition-duration;
+      }
+    }
+}
+

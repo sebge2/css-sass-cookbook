@@ -1,0 +1,12 @@
+$colors: (main-color: rgb(194, 111, 156));
+$box-shadow: (inactive: 0 8px 16px 0 rgba(0,0,0,0.2), on-hover: 0 4px 8px 0 rgba(0,0,0,0.2));
+$transition-duration: 0.3s;
+
+@mixin lighten-color($color) {
+    fill: lighten($color, 10%);
+    color: lighten($color, 10%);
+}
+
+@mixin lighten-main-color(){
+    @include lighten-color(map-get($colors, main-color));
+}

@@ -28,8 +28,13 @@ gulp.task('generate-index', function() {
     function formatter(filePath) {
         const htmlContent = fs.readFileSync(`./html/${filePath}`, 'utf8');
         const title = xpath.fromPageSource(htmlContent).findElement("//title");
+        const iconHref = xpath.fromPageSource(htmlContent).findElement("//link[@rel='icon']").getAttribute('href');
+        const iconContent = fs.readFileSync(iconHref, 'utf8');
 
-        return `<li><a href="${filePath}">${title.getText()}</a>\n`;
+        return `<a href="${filePath}">
+            ${iconContent}
+            <p>${title.getText()}</p>
+        </a>\n`;
     }
 
     return merge([gulp
@@ -40,13 +45,13 @@ gulp.task('generate-index', function() {
            <!DOCTYPE html>
            <html>
            <head>
+               <link rel="stylesheet" href="css/home.css">
                <title>CSS & SASS Cookbook</title>
            </head>
            <body>
-               <p>Available Pages:</p>
-               <ul id="page_list">
+               <div class="cards">
                     ${content}
-               </ul>
+               </div>
            </body>
            </html>
            `;

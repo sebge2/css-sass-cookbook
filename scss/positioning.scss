@@ -1,15 +1,9 @@
-.example {
-    border: 3px solid black;
-    margin: 50px auto;
-}
+@import 'shared.scss';
 
-.box {
+.example-inner-box {
   display: inline-block;
   width: 250px;
   height: 250px;
-  background: red;
-  color: white;
-  margin: 5px
 }
 
 .fixed {
@@ -20,7 +14,6 @@
 
 .static {
     position: static;
-    border: 3px solid red;
 }
 
 .relative {
@@ -31,17 +24,24 @@
   position: absolute;
   top: 50px;
   left: 250px;
+  width: 450px;
 }
 
-.sticky {
+.example-box-sticky {
      height: 200px;
      overflow:auto;
 
-    dt {
+     .example-inner-box {
+        padding: 0;
+        display: block;
+        width: auto;
+        height: auto;
+     }
+
+    .sticky {
       position: -webkit-sticky;
       position: sticky;
       top: 0;
-      background-color: red;
       padding: 5px;
     }
 }

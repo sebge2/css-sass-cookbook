@@ -1,43 +1,14 @@
+@import 'shared.scss';
+
 div {
     box-sizing: border-box;
-    font-size: 1.5rem;
 }
 
-.example {
-    margin: 50px auto;
-
-    border: 1px solid black;
-}
-
-.item {
-    background: #ff7300;
-    padding: 10px;
-    border: 5px solid black;
-    margin: 10px;
-}
-
-.w-250 {
-    width: 250px;
-}
-
-.w-300{
-    width: 300px;
-}
-
-.w-350{
-    width: 350px;
-}
-
-.h-250{
-    height: 250px;
-}
-
-.h-300 {
-    height: 300px;
-}
-
-.h-800 {
-    height: 800px;
+.example-box {
+    .example-inner-box {
+        border: 5px solid black;
+        margin: 10px;
+    }
 }
 
 .flex-container {

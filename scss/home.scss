@@ -50,7 +50,6 @@ body {
 
       & > p {
         color: map-get($colors, main-color);
-        font-family: monospace;
         font-weight: bolder;
         transition: $transition-duration;
       }

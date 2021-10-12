@@ -45,8 +45,9 @@ gulp.task('generate-index', function() {
            <!DOCTYPE html>
            <html>
            <head>
-               <link rel="stylesheet" href="css/home.css">
-               <title>CSS & SASS Cookbook</title>
+                <link rel="stylesheet" href="css/home.css">
+                <meta name="viewport" content="width=device-width">
+                <title>CSS & SASS Cookbook</title>
            </head>
            <body>
                <div class="cards">

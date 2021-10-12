@@ -12,11 +12,12 @@ $transition-duration: 0.3s;
 }
 
 html {
-    color: map-get($colors, main-color);
     font-family: monospace;
 }
 
 h1 {
+    color: map-get($colors, main-color);
+
     &:not(:first-of-type) {
         margin-top: 4rem;
     }

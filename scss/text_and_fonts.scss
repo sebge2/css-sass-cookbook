@@ -1,20 +1,10 @@
+@import 'shared.scss';
+
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
 @font-face {
     font-family: "Ephesis";
     src: url("../assets/fonts/Ephesis-Regular.ttf") format("truetype")
-}
-
-* {
-    margin: 10px;
-}
-
-html {
-font-size: 300%;
-}
-
-h1 {
-    margin: 50px 10px;
 }
 
 .font_weight_400 {

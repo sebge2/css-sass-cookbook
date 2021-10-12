@@ -1,6 +1,4 @@
-h1 {
-    margin-top: 50px;
-}
+@import 'shared.scss';
 
 .grid {
     display: grid;
@@ -11,17 +9,7 @@ h1 {
     grid-template-columns: repeat(2, 1fr);
 }
 
-.example {
-    margin: 20px auto;
-    border: 1px solid black;
-}
-
-.element {
-    background: rgba(255, 154, 72, 0.5);
-    border: 1px dashed red;
-}
-
-.example-1-4 {
+.example-1-box-4 {
     grid-column-start: 3;
     grid-column-end: 5;
     grid-row-start: 1;
@@ -37,7 +25,7 @@ h1 {
     grid-template-rows: [row-1] 1fr [row-2] 1fr [row-3];
 }
 
-.example-4-4 {
+.example-4-box-4 {
     grid-column-start: 1;
     grid-column-end: -1;
     grid-row-start: row-1;
@@ -67,11 +55,11 @@ h1 {
     justify-content: center;
 }
 
-.example-5-1 {
+.example-5-box-1 {
     grid-column: col-start 2 / col-end 2;
 }
 
-.example-5-2 {
+.example-5-box-2 {
     grid-column: col-start 3 / col-end 4;
     grid-row: row-2-start / row-2-end;
 
@@ -79,12 +67,12 @@ h1 {
     align-self: center;
 }
 
-.example-5-3 {
+.example-5-box-3 {
     grid-column: col-start 1/col-end 4;
     grid-row: hd-start / hd-end;
 }
 
-.example-5-4 {
+.example-5-box-4 {
     grid-column: col-start 1 / col-end 4;
     grid-row: row-3-start / row-3-end;
 }
@@ -122,7 +110,7 @@ h1 {
     grid-template-columns: repeat(auto-fill, 500px);
 }
 
-.example-9-2 {
+.example-9-box-2 {
     grid-column: span 2;
 }
 
@@ -130,6 +118,6 @@ h1 {
     grid-auto-flow: row dense;
 }
 
-.example-10-2 {
+.example-10-box-2 {
     grid-column: span 2;
 }

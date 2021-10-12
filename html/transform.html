@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/transform.css">
+    <link rel="icon" type="image/svg+xml" href="assets/icons/transform.svg">
+    <title>Transform</title>
+
+    <script type="text/javascript">
+function updateRotateBox() {
+    const rotateX = document.getElementById('rotate-x').value;
+    const rotateY = document.getElementById('rotate-y').value;
+    const rotateZ = document.getElementById('rotate-z').value;
+
+    const value = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) rotateZ(${rotateZ}deg)`;
+    document.getElementById('rotate-box').style.transform = value;
+    console.log(value);
+}
+
+function updateTranslatableBox() {
+    const translateX = document.getElementById('translate-x').value;
+    const translateY = document.getElementById('translate-y').value;
+
+    const value = `translateX(${translateX}px) translateY(${translateY}px)`;
+    document.getElementById('translatable-box').style.transform = value;
+    console.log(value);
+}
+    </script>
+</head>
+<body>
+    <h1>Rotate</h1>
+    <div class="example-box">
+        <div id="rotate-box">
+            Move me
+        </div>
+        <p>Rotate X (in deg): <input type="number" value="0" id="rotate-x" onchange="updateRotateBox()" /> </p>
+        <p>Rotate Y (in deg): <input type="number" value="0" id="rotate-y" onchange="updateRotateBox()" /> </p>
+        <p>Rotate Z (in deg): <input type="number" value="0" id="rotate-z" onchange="updateRotateBox()" /> </p>
+    </div>
+
+    <h1>Translate</h1>
+    <div class="example-box">
+        <div id="translatable-box">
+            Move me
+        </div>
+        <p>Translate X (in px): <input type="number" value="0" id="translate-x" onchange="updateTranslatableBox()" /> </p>
+        <p>Translate Y (in px): <input type="number" value="0" id="translate-y" onchange="updateTranslatableBox()" /> </p>
+    </div>
+
+    <h1>Rotate, skew and scale</h1>
+    <div class="example-box">
+        <div class="rotate-skew-scale-box">
+            <img src="assets/images/star_wars.png">
+        </div>
+    </div>
+</body>
+</html>

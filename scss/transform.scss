@@ -1,0 +1,26 @@
+@import 'shared.scss';
+
+#rotate-box,
+#translatable-box {
+    margin: 1rem;
+    width: 10rem;
+    height: 10rem;
+    text-align: center;
+
+    border: 1px solid map-get($colors, main-color);
+}
+
+.rotate-skew-scale-box {
+    width: 60%;
+    max-width: 40rem;
+
+    box-shadow: map-get($box-shadow, inactive);
+    transform: skew(20deg);
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        vertical-align: top;
+        transform: skew(-20deg) scale(1.4);
+    }
+}

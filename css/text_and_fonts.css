@@ -10,6 +10,19 @@ h1:not(:first-of-type) {
   margin-top: 4rem;
 }
 
+.doc-link {
+  margin-top: 2rem;
+}
+.doc-link a {
+  text-decoration: none;
+  color: #113362;
+  border-bottom: 2px solid #c26f9c;
+  transition: border-bottom-color 3s ease-out;
+}
+.doc-link a:hover, .doc-link a:active {
+  border-bottom-color: #113362;
+}
+
 .example-box {
   margin: 2rem auto;
   border: 1px solid #c26f9c;

@@ -1,0 +1,64 @@
+html {
+  font-family: monospace;
+}
+
+h1 {
+  color: #c26f9c;
+}
+h1:not(:first-of-type) {
+  margin-top: 4rem;
+}
+
+.example-box {
+  margin: 2rem auto;
+  border: 1px solid #c26f9c;
+  font-size: 1.5rem;
+}
+.example-box .example-inner-box {
+  background: #c26f9c;
+  color: #113362;
+  border: 1px dashed #113362;
+  padding: 0.9rem;
+}
+
+.w-250 {
+  width: 250px;
+}
+
+.w-300 {
+  width: 300px;
+}
+
+.w-350 {
+  width: 350px;
+}
+
+.h-250 {
+  height: 250px;
+}
+
+.h-300 {
+  height: 300px;
+}
+
+.h-800 {
+  height: 800px;
+}
+
+.example-box {
+  padding: 10px;
+}
+
+.combinator-adjacent-sibling,
+.combinator-general-sibling,
+.combinator-child,
+.combinator-descendant {
+  background: #a14476 !important;
+}
+
+.combinator-adjacent-sibling + .example-adjacent-sibling,
+.combinator-general-sibling ~ .example-general-sibling,
+.combinator-child > .example-child,
+.combinator-descendant .example-descendant {
+  background: #fffeff !important;
+}

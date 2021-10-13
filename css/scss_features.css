@@ -1,55 +1,117 @@
+html {
+  font-family: monospace;
+}
+
 h1 {
-  margin-top: 50px;
+  color: #c26f9c;
+}
+h1:not(:first-of-type) {
+  margin-top: 4rem;
+}
+
+.example-box {
+  margin: 2rem auto;
+  border: 1px solid #c26f9c;
+  font-size: 1.5rem;
+}
+.example-box .example-inner-box {
+  background: #c26f9c;
+  color: #113362;
+  border: 1px dashed #113362;
+  padding: 0.9rem;
+}
+
+.w-250 {
+  width: 250px;
+}
+
+.w-300 {
+  width: 300px;
+}
+
+.w-350 {
+  width: 350px;
+}
+
+.h-250 {
+  height: 250px;
+}
+
+.h-300 {
+  height: 300px;
+}
+
+.h-800 {
+  height: 800px;
 }
 
 .my-parent, .my-child {
-  background: #ffc966;
+  background: #153e78;
+  /* usage of lighten function */
   padding: 10px;
   margin: 20px auto;
+  color: white;
 }
 
 .my-child {
+  /* extension */
   border: 1px dashed gray;
 }
 
 .simple-variable {
-  border: 1px solid black;
+  border: 1px solid #c26f9c;
 }
 
-.map-variable span {
-  color: red;
-}
 .map-variable p {
-  color: orange;
+  color: white;
+}
+.map-variable p:nth-child(1n) {
+  background: #c26f9c;
+  /* map variable usage */
+}
+.map-variable p:nth-child(2n) {
+  background: #113362;
+  /* map variable usage */
 }
 
 .my-mixin-grid {
+  /* mixin */
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  /* mixin usage */
 }
 
 @media (min-width: 40rem) {
   .my-mixin-content-grid {
-    background-color: red;
+    /* mixin usage */
+    background-color: #113362;
+    color: white;
   }
 }
 
 .my-ampersand {
   padding: 10px;
-  background: red;
+  background: #113362;
+  color: white;
 }
 .my-ampersand:hover {
-  background: #ff3333;
+  /* operator */
+  background: #194a8d;
 }
 
+.my-for-loop {
+  /* loop */
+  /* loop */
+  /* loop */
+}
 .my-for-loop ul :nth-child(3n+1) {
-  background-color: #0059b3;
+  background-color: #1c55a3;
 }
 .my-for-loop ul :nth-child(3n+2) {
-  background-color: #0080ff;
+  background-color: #3178db;
 }
 .my-for-loop ul :nth-child(3n+3) {
-  background-color: #4da6ff;
+  background-color: #72a3e7;
 }
 
 .my-if-else .square {
@@ -61,5 +123,6 @@ h1 {
   width: 100px;
   height: 100px;
   border: 1px solid black;
+  /* if */
   border-radius: 50px;
 }

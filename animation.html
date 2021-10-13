@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="icon" type="image/svg+xml" href="assets/icons/animation.svg">
+    <title>Animation</title>
+</head>
+<body>
+    <h1>Timing Function</h1>
+    <div class="example-box example-ease-in">
+        ease-in
+    </div>
+    <div class="example-box example-ease-out">
+        ease-out
+    </div>
+    <p>
+        <a href="https://easings.net/">Functions</a>
+    </p>
+
+    <h1>Transitions</h1>
+    <div class="example-box example-transition">
+        Go over me, a transition is applied.
+    </div>
+
+    <h1>Multiple Keyframes</h1>
+    <p class="example-box multiple-keyframes">
+        Looooop
+    </p>
+
+    <h1>Animation Fill Mode</h1>
+    <div class="example-box fill-mode-forwards">
+        Forwards: the target will retain the computed values set by the last keyframe encountered during execution.
+    </div>
+    <div class="example-box fill-mode-backwards">
+        Backwards: the animation will apply the values defined in the first relevant keyframe as soon as it is applied to the target,
+        and retain this during the animation-delay period.
+    </div>
+    <div class="example-box fill-mode-none">
+        None: the animation will not apply any styles to the target when it's not executing.
+        The element will instead be displayed using any other CSS rules applied to it. This is the default value.
+    </div>
+
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-fill-mode">Documentation</a>
+
+
+    <h1>Animation Direction</h1>
+    <div class="example-box animation-direction-normal">
+        Normal: the animation plays forwards each cycle. In other words, each time the animation cycles,
+        the animation will reset to the beginning state and start over again. This is the default value.
+    </div>
+    <div class="example-box animation-direction-reverse">
+        Reverse: the animation plays backwards each cycle.
+        In other words, each time the animation cycles, the animation will reset to the end state and start over again.
+    </div>
+    <div class="example-box animation-direction-alternate">
+        Alternate: the animation reverses direction each cycle, with the first iteration being played forwards.
+    </div>
+    <div class="example-box animation-direction-alternate-reverse">
+        Alternate-reverse: the animation reverses direction each cycle, with the first iteration being played backwards.
+    </div>
+
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-direction">Documentation</a>
+
+</body>
+</html>

@@ -1,0 +1,104 @@
+@import 'shared.scss';
+
+@keyframes fade-in {
+    0% {
+        opacity: 100%;
+    }
+
+    100% {
+        opacity: 0%;
+    }
+}
+
+.example-ease-in {
+    animation: fade-in 1500ms ease-in infinite alternate;
+}
+
+.example-ease-out {
+    animation: fade-in 1500ms ease-out infinite alternate;
+}
+
+.example-transition {
+    transition: color 500ms ease-in, background 500ms ease-out;
+    color: black;
+    background: white;
+
+    &:hover {
+        color: white;
+        background: gray;
+    }
+}
+
+@keyframes rotate-z {
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    75% {
+        transform: rotateZ(180deg);
+    }
+
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+.multiple-keyframes {
+    animation: rotate-z 1s cubic-bezier(0.5, 0, 0.75, 0) infinite;
+    width: 200px;
+    text-align: center;
+}
+
+@keyframes grow {
+  0% { font-size: 0; }
+  100% { font-size: 40px; }
+}
+
+.fill-mode-forwards,
+.fill-mode-backwards,
+.fill-mode-none{
+    animation: grow 3s 2s;
+}
+
+.fill-mode-forwards {
+    animation-fill-mode: forwards;
+}
+
+.fill-mode-backwards{
+    animation-fill-mode: backwards;
+}
+
+.fill-mode-none{
+}
+
+@keyframes translate-x {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(20px);
+    }
+}
+
+.animation-direction-normal,
+.animation-direction-reverse,
+.animation-direction-alternate,
+.animation-direction-alternate-reverse {
+    animation: translate-x 1s infinite;
+}
+
+.animation-direction-normal {
+}
+
+.animation-direction-reverse {
+    animation-direction: reverse;
+}
+
+.animation-direction-alternate {
+    animation-direction: alternate;
+}
+
+.animation-direction-alternate-reverse {
+    animation-direction: alternate-reverse;
+}

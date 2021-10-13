@@ -1,21 +1,19 @@
 @use "sass:math";
+@import 'shared.scss';
 
-h1 {
-  margin-top: 50px;
-}
-
-$default-border: 1px solid black;
-$colors: (main-color: red, secondary-color: orange);
+$default-border: 1px solid map-get($colors, 'main-color');
+$backgrounds: (main-color: map-get($colors, 'main-color'), secondary-color: map-get($colors, 'secondary-color'));
 $desktop-size: 40rem;
 
 .my-parent {
-    background: lighten(orange, 20%);
+    background: lighten(map-get($backgrounds, secondary-color), 5%); /* usage of lighten function */
     padding: 10px;
     margin: 20px auto;
+    color: white;
 }
 
 .my-child {
-    @extend .my-parent;
+    @extend .my-parent; /* extension */
     border: 1px dashed gray;
 }
 
@@ -24,22 +22,26 @@ $desktop-size: 40rem;
 }
 
 .map-variable {
-    span {
-        color: map-get($colors, main-color);
+    p {
+        color: white;
     }
 
-    p {
-        color: map-get($colors, secondary-color);
+    p:nth-child(1n) {
+        background: map-get($backgrounds, main-color); /* map variable usage */
+    }
+
+    p:nth-child(2n) {
+        background: map-get($backgrounds, secondary-color); /* map variable usage */
     }
 }
 
-@mixin display-grid($size) {
+@mixin display-grid($size) { /* mixin */
     display: grid;
     grid-template-columns: repeat($size, 1fr);
 }
 
 .my-mixin-grid {
-    @include display-grid(2);
+    @include display-grid(2); /* mixin usage */
 }
 
 
@@ -50,24 +52,26 @@ $desktop-size: 40rem;
 }
 
 .my-mixin-content-grid {
-    @include desktop-size-media {
-        background-color: red;
+    @include desktop-size-media { /* mixin usage */
+        background-color: map-get($backgrounds, secondary-color);
+        color: white;
     }
 }
 
 .my-ampersand {
     padding: 10px;
-    background: red;
+    background: map-get($backgrounds, secondary-color);
+    color: white;
 
-    &:hover {
-        background: lighten(red, 10%);
+    &:hover {  /* operator */
+        background: lighten(map-get($backgrounds, secondary-color), 10%);
     }
 }
 
 .my-for-loop {
-    $base-color: #036;
+    $base-color: map-get($colors, secondary-color);
 
-    @for $i from 1 through 3 {
+    @for $i from 1 through 3 { /* loop */
       ul :nth-child(3n + #{$i}) {
         background-color: lighten($base-color, $i * 15%);
       }
@@ -80,7 +84,7 @@ $desktop-size: 40rem;
       height: $size;
       border: 1px solid black;
 
-      @if $circle {
+      @if $circle { /* if */
         border-radius: math.div($size, 2);
       }
     }

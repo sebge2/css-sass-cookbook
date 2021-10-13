@@ -1,0 +1,19 @@
+@import 'shared.scss';
+
+.example-box {
+    padding: 10px;
+}
+
+.combinator-adjacent-sibling,
+.combinator-general-sibling,
+.combinator-child,
+.combinator-descendant {
+    background: darken(map-get($colors, 'main-color'), 15%) !important;
+}
+
+.combinator-adjacent-sibling + .example-adjacent-sibling,
+.combinator-general-sibling ~ .example-general-sibling,
+.combinator-child > .example-child,
+.combinator-descendant  .example-descendant {
+    background: lighten(map-get($colors, 'main-color'), 40%) !important;
+}
